@@ -10,7 +10,7 @@ except NameError:
 
 try:
     system = platform.system()
-    python_version = ".".join(sys.version_info[0:2])
+    python_version = ".".join([str(i) for i in sys.version_info[0:2]])
     # get_terminal_size exists on Python 3.3 and 3.4 but isn't working on windows
     if system == "Windows" and python_version in ["3.3", "3.4"]:
         raise ImportError
