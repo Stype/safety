@@ -2,9 +2,9 @@
 deploy:
   user: JayFK
   true:
-    condition: $TOXENV == py27
     repo: pyupio/safety
     tags: true
+    python: "2.7"
   distributions: sdist bdist_wheel
   provider: pypi
   password:
